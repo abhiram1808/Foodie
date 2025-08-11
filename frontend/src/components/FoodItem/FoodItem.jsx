@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react'
+import { useContext } from 'react'
+import PropTypes from 'prop-types'
 import './FoodItem.css'
 import { assets } from '../../assets/assets'
 import { StoreContext } from '../../Context/StoreContext';
 
 const FoodItem = ({ image, name, price, desc , id }) => {
 
-    const [itemCount, setItemCount] = useState(0);
     const {cartItems,addToCart,removeFromCart,url,currency} = useContext(StoreContext);
 
     return (
@@ -30,6 +30,14 @@ const FoodItem = ({ image, name, price, desc , id }) => {
             </div>
         </div>
     )
+}
+
+FoodItem.propTypes = {
+    image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    desc: PropTypes.string.isRequired,
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 }
 
 export default FoodItem
