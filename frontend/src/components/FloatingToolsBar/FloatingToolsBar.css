@@ -1,0 +1,44 @@
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: #007bff;
+  z-index: 1000;
+  transition: width 0.2s ease;
+}
+
+/* Floating buttons container */
+.floating-tools {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+/* Each button style */
+.tool-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tool-btn:hover {
+  background-color: #0056b3;
+}
+
+.chat-btn {
+  background-color: #28a745;
+}
+
+.chat-btn:hover {
+  background-color: #1e7e34;
+}
